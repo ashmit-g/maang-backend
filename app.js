@@ -8,6 +8,8 @@ app.use(
     origin: [
       "http://localhost:3000",
       "https://maangprepacademy.com",
+      "https://www.maangprepacademy.com",
+      "https://maang-backend-1.onrender.com"
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
