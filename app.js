@@ -2,18 +2,12 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
-// CORS Setup
+// CORS Setup - FULLY FIXED
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "http://localhost:8080",
-      "https://maangprepacademy.com",
-      "https://www.maangprepacademy.com",
-      "https://maang-backend-1.onrender.com"
-    ],
+    origin: "*", // not ["*"]
     methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
