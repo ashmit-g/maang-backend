@@ -2,19 +2,19 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
-// CORS Setup - FULLY FIXED
 app.use(
   cors({
-    origin: "*", // not ["*"]
+    origin: [
+      "http://localhost:3000",
+      "https://maangprepacademy.com",
+      "https://www.maangprepacademy.com"
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
-// Middlewares
 app.use(express.json());
 
-// Routes
 app.get("/", (req, res) => {
   res.send("Maang Backend Running...");
 });
