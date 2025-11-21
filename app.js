@@ -1,8 +1,18 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-app.use(cors());
 
+// CORS Setup
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://maangprepacademy.com",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 // Middlewares
 app.use(express.json());
@@ -14,4 +24,4 @@ app.get("/", (req, res) => {
 
 app.use("/api/email", require("./routes/emailRoutes"));
 
-module.exports = app;   
+module.exports = app;
