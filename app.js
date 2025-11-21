@@ -4,11 +4,7 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "https://maangprepacademy.com",
-      "https://www.maangprepacademy.com"
-    ],
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
