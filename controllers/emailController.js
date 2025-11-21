@@ -12,10 +12,10 @@ exports.sendMail = async (req, res) => {
         user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASS,
       },
-      tls: {
-    ciphers: "SSLv3",
-    rejectUnauthorized: false
-  }
+  //     tls: {
+  //   ciphers: "SSLv3",
+  //   rejectUnauthorized: false
+  // }
     });
 
     await transporter.sendMail({
