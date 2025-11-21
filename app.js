@@ -7,6 +7,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
+      "http://localhost:8080",
       "https://maangprepacademy.com",
       "https://www.maangprepacademy.com",
       "https://maang-backend-1.onrender.com"
